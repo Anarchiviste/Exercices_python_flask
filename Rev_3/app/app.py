@@ -2,7 +2,7 @@ from flask import Flask
 from flask import jsonify
 from flask import request
 from flask import render_template
-import json
+import json  # besoin de url_for pour générer des urls dynamiques
 
 app = Flask(__name__)
 

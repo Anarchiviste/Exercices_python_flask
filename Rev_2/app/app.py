@@ -4,6 +4,16 @@ from flask import url_for
 
 app = Flask(__name__)
 
+from flask_sqlalchemy import SQLAlchemy
+from sqlalchemy.orm import DeclarativeBase
+
+
+class Base(DeclarativeBase):
+    pass
+
+
+db = SQLAlchemy(model_class=Base)
+
 
 @app.route("/")
 def home():
